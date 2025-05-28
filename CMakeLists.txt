@@ -1,0 +1,20 @@
+cmake_minimum_required(VERSION 3.16)
+project(NavCore)
+
+set(CMAKE_CXX_STANDARD 17)
+
+# 根据不同配置设置输出目录
+foreach(OUTPUTCONFIG Debug Release RelWithDebInfo MinSizeRel)
+    string(TOUPPER ${OUTPUTCONFIG} OUTPUTCONFIG_UPPER)
+    set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_${OUTPUTCONFIG_UPPER} ${CMAKE_BINARY_DIR}/bin/${OUTPUTCONFIG})
+    set(CMAKE_LIBRARY_OUTPUT_DIRECTORY_${OUTPUTCONFIG_UPPER} ${CMAKE_BINARY_DIR}/bin/${OUTPUTCONFIG})
+    set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY_${OUTPUTCONFIG_UPPER} ${CMAKE_BINARY_DIR}/bin/${OUTPUTCONFIG})
+endforeach()
+
+# 添加子模块
+add_subdirectory(BaseMath)
+
+# 主程序
+add_executable(NavCoreApp Main/main.cpp)
+target_link_libraries(NavCoreApp PRIVATE BaseMath)
+

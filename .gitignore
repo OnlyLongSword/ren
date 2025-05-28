@@ -1,0 +1,55 @@
+# 编译输出目录
+/build/
+/bin/
+/out/
+
+# CMake 生成文件和目录
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.cmake
+install_manifest.txt
+Testing/
+
+# Visual Studio 文件
+*.sln
+*.vcxproj*
+*.vcxproj.filters
+*.user
+*.opensdf
+*.sdf
+*.ipch
+*.pdb
+*.obj
+*.idb
+*.tlog/
+*.lastbuildstate
+
+# Visual Studio Code 文件
+.vscode/
+
+# 编译生成的二进制文件
+*.exe
+*.dll
+*.so
+*.dylib
+*.lib
+*.a
+
+# 临时文件和日志
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.DS_Store
+Thumbs.db
+
+# 其他操作系统文件
+ehthumbs.db
+Icon?
+desktop.ini
+
+# 外部依赖库（如果你是放在 packages 里且不提交）
+packages/
