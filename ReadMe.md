@@ -1,8 +1,9 @@
 # How to use it?
 
 ```bash
+mkdir Code
 git clone https://github.com/wuyifan450/ren
-cd NavCore
+cd Code
 
 mkdir build
 cd build
