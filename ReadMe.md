@@ -2,8 +2,8 @@
 
 ```bash
 mkdir Code
-git clone https://github.com/wuyifan450/ren
 cd Code
+git clone https://github.com/wuyifan450/ren
 
 mkdir build
 cd build
