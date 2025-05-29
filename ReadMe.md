@@ -1,7 +1,7 @@
 # How to use it?
 
 ```bash
-git clone <你的仓库地址>
+git clone https://github.com/wuyifan450/ren
 cd NavCore
 
 mkdir build
