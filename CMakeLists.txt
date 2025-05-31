@@ -13,6 +13,7 @@ endforeach()
 
 # 添加子模块
 add_subdirectory(BaseMath)
+add_subdirectory(DataDecode)
 
 # 主程序
 add_executable(NavCoreApp Main/main.cpp)
