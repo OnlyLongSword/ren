@@ -1,0 +1,48 @@
+@startuml DataParseMode
+
+interface IObsDecoder {
+    +decode(ctx: DecodeContext): int
+}
+
+abstract class DecodeContext
+
+class NovDecodeContext
+
+class NovOem7Decoder {
+    +decode(ctx: DecodeContext): int
+}
+
+class DecodeManager {
+    - m_decoder: IObsDecoder*
+    - m_iterator: IDataIterator*
+    + setDecoder(decoder: IObsDecoder*)
+    + getIterator(): IDataIterator*
+}
+
+class SatelliteDataBase
+class Ephrec
+class Obs
+
+class SatelliteDataManager{
+- m_ephrecs: std::vector<Ephrec>
+- m_obs: Obs
+}
+
+class DataIterator{
++ start()
++ done()
++ step()
++ get(): SatelliteDataBase
+}
+
+Ephrec ..|> SatelliteDataBase
+Obs ..|> SatelliteDataBase
+SatelliteDataManager *-- SatelliteDataBase
+DecodeManager *-- IObsDecoder 
+DecodeManager *-- DataIterator 
+NovOem7Decoder ..|> IObsDecoder
+NovDecodeContext --|> DecodeContext
+IObsDecoder ..> DecodeContext
+DataIterator ..> SatelliteDataBase
+
+@enduml
