@@ -50,6 +50,7 @@ Thumbs.db
 ehthumbs.db
 Icon?
 desktop.ini
+*.bat
 
 # 外部依赖库（如果你是放在 packages 里且不提交）
 packages/
