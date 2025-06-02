@@ -20,9 +20,7 @@ add_library(DataDecode SHARED
     SatelliteObs.cpp 
     SatelliteDataManager.cpp 
     DataIterator.cpp
-   
 )
-
 
 include(GenerateExportHeader)
 # 生成导出头文件

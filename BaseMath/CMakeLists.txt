@@ -2,9 +2,6 @@
 add_library(BaseMath SHARED
 TestBaseMath.cpp
 TestBaseMath.h
-PCH.h
-Matrix.h
-MO.cpp
 )
 
 include(GenerateExportHeader)
