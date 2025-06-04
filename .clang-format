@@ -1,0 +1,69 @@
+---
+# 基础风格
+BasedOnStyle: LLVM
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+
+# 最大列宽，超过自动换行
+ColumnLimit: 100
+
+# 指针 & 引用风格
+PointerAlignment: Left
+DerivePointerAlignment: false
+
+# 空格控制
+SpaceBeforeParens: ControlStatements
+SpacesBeforeTrailingComments: 1
+SpaceInEmptyParentheses: false
+SpaceAfterCStyleCast: true
+SpaceBeforeCpp11BracedList: false
+
+# 命名空间缩进
+NamespaceIndentation: All
+
+# 大括号规则
+BreakBeforeBraces: Allman
+
+BraceWrapping:
+  AfterClass: true
+  AfterControlStatement: true
+  AfterEnum: true
+  AfterFunction: true
+  AfterNamespace: true
+  AfterStruct: true
+  AfterUnion: true
+  BeforeCatch: true
+  BeforeElse: true
+  IndentBraces: false
+  SplitEmptyFunction: true
+  SplitEmptyRecord: true
+  SplitEmptyNamespace: true
+
+# include 排序
+SortIncludes: true
+IncludeBlocks: Preserve
+IncludeCategories:
+  - Regex:           '^<.*\.h>'
+    Priority:        1
+    SortPriority:    0
+    CaseSensitive:   false
+  - Regex:           '^".*\.h"'
+    Priority:        2
+    SortPriority:    0
+    CaseSensitive:   false
+  - Regex:           '.*'
+    Priority:        3
+
+# 函数参数相关
+BinPackParameters: false
+AllowAllParametersOfDeclarationOnNextLine: false
+IndentWrappedFunctionNames: false
+
+# 函数返回类型和声明尽量同行
+AlwaysBreakAfterReturnType: None
+AlwaysBreakTemplateDeclarations: false
+
+# 其它细节
+IndentCaseLabels: true
+DeriveLineEnding: true
